@@ -2,6 +2,6 @@
   <body>
     <h1>Hello, <?php echo($_SERVER['REMOTE_USER']) ?></h1>
     <pre><?php print_r(apache_request_headers()); ?></pre>
-    <a href="/example/redirect_uri?logout=http%3A%2F%2Flocalhost%3A8080%2F">Logout</a>
+    <a href="/example/redirect_uri?logout=<?php echo ("http" . (isset($_SERVER['HTTPS']) ? 's' : '') . "://". $_SERVER['HTTP_HOST'] . ":" . $_SERVER['SERVER_PORT'] ."/") ?>">Logout</a>
   </body>
 </html>
