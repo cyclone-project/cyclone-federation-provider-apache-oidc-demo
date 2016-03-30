@@ -37,5 +37,3 @@ If you encounter an error 100 during the build with the apt-get update, it can m
 docker --dns 157.136.10.1 --dns 157.136.10.2 build -t cyclone/apache2:ssl .
 
 ```
-
-When building behind a firewall that block some
