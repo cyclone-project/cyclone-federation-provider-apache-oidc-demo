@@ -26,6 +26,11 @@ Visit `https://localhost/example/` for the openid-connect example.
 
 OIDCRemoteUserClaim setting can be used to specify which claim to use to set REMOTE_USER in apache2.
 
+## User filtering
+
+See in [000-default.conf](000-default.conf) that the config is different for 443 and 80. On port 443 we only allow edugain user with an email ending with `u-psud.fr` or `france-bioinformatique.fr` or users listed in /etc/apache2/apache_groups
+
+
 ## Known problem
 
 If you encounter an error 100 during the build with the apt-get update, it can means that you are behind a firewall that is blocking some dns resolution. To fix it, use your in-house dns like this :
