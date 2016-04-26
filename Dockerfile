@@ -18,3 +18,5 @@ EXPOSE 80
 EXPOSE 443
 
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
+
+COPY ./apache_groups /etc/apache2/apache_groups
