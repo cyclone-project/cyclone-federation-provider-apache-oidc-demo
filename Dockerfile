@@ -28,6 +28,7 @@ CMD apache2ctl -D FOREGROUND
 
 EXPOSE 80
 EXPOSE 443
+EXPOSE 8443
 
 COPY ./000-default.conf /etc/apache2/sites-available/000-default.conf
 
